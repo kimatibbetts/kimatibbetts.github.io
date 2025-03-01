@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,200;0,400;0,700;1,200;1,400;1,700&display=swap');
+@import 'normalize';
+
+$space: calc( 1rem + 1vw );
+
+html,
+body {
+    height: 100%;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	color: #444;
+	font: 400 1.4rem/1.3 "Overpass", Helvetica, Arial, Verdana;
+}
+
+img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+.padder {
+    display: grid;
+    gap: calc( #{$space} * 2 );
+    padding: calc( #{$space} * 2 );
+}
+
+h1.title {
+    font-family: "Arial Narrow", Arial;
+    font-size: calc( #{$space} * 1.5 );
+    font-weight: 400;
+    white-space: nowrap;
+
+    b {
+        margin-right: -0.05em;
+        font-family: "Arial Rounded MT Bold", Arial;
+        letter-spacing: -0.05em;
+    }
+
+    i {
+        font-family: Arial;
+        font-size: 1.4rem;
+    }
+}
+
+.portrait {
+    width: calc( #{$space} * 15 );
+}
+
+.art-lrg,
+.art-med,
+.art-sml {
+    display: grid;
+    gap: $space;
+
+    h2 {
+        margin-top: calc( #{$space} * 5 );
+        grid-column: 1 / -1;
+    }
+}
+
+.art-lrg {
+    grid-template-columns: repeat( auto-fill, minmax( calc( #{$space} * 12 ), 1fr ) );
+}
+
+.art-med {
+    grid-template-columns: repeat( auto-fill, minmax( calc( #{$space} * 6 ), 1fr ) );
+}
+
+.art-sml {
+    grid-template-columns: repeat( auto-fill, minmax( calc( #{$space} * 4 ), 1fr ) );
+}
